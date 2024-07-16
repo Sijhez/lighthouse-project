@@ -2,5 +2,9 @@ const async = require("hbs/lib/async")
 
 
 exports.home = async(require, response) => {
-    response.render("home")
+    // response.send('HOLA MUNDO NUEVO')
+    return response.status(200).json({
+        msg:"INICIO EXITOSO"
+    })
+    //response.render("home")
 }

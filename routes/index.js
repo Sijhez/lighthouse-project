@@ -1,6 +1,6 @@
-const express = require("express")
-const router = express.Router()
-const indexController = require("../controllers/home")
+import express from 'express';
+import router from express.Router();
+import indexController from "../controllers/home";
 
 router.get("/", indexController.home)
 

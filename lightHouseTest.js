@@ -1,3 +1,4 @@
+import fs from 'fs';
 import * as ChromeLauncher from 'chrome-launcher';
 import lighthouse from 'lighthouse';
 import fs from 'fs';

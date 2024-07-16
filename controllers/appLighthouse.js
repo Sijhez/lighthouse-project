@@ -1,26 +1,30 @@
-const fs = require("fs") 
-const lighthouse = require("lighthouse")
-const chromeLauncher = require('chrome-launcher')
+const fs = require("fs")
+// const lighthouse = require("lighthouse")
+// const chromeLauncher = require('chrome-launcher')
 const { response } = require('express')
 
 
 
 exports.makeAnalisys = async(require, response) => {
+
+  return response.status(200).json({
+    msg:"LISTO PARA EL TEST?"
+   })
+/*
   const {
     path
   } = require.body
-  
+
   try {
     try {
       const chrome = await ChromeLauncher.launch({chromeFlags: ['--headless']})
       const options = {
-        logLevel: 'info', 
-        output: 'html', 
-        onlyCategories: ['performance'], 
+        logLevel: 'info',
+        output: 'html',
+        onlyCategories: ['performance'],
         port: chrome.port};
-  
       const runnerResult = await lighthouse(url, options);
-  
+
       console.log('Report is done for', runnerResult.lhr.finalDisplayedUrl);
       console.log('Performance score was', runnerResult.lhr.categories.performance.score * 100);
       
@@ -49,6 +53,7 @@ exports.makeAnalisys = async(require, response) => {
         data:error
     } )
   }
+     */
 }
 
 
